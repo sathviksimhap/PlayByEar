@@ -1,16 +1,20 @@
-from winsound import Beep
+from scamp import *
+from notes import nf, nl
 
-# Happy Birthday BB
-Beep(392, 250)
-Beep(392, 250)
-Beep(440, 500)
-Beep(392, 500)
-Beep(523, 500)
-Beep(493, 1000)
+s = Session(tempo=120)
 
-Beep(392, 250)
-Beep(392, 250)
-Beep(440, 500)
-Beep(392, 500)
-Beep(587, 500)
-Beep(523, 1000)
+piano = s.new_part("piano")
+
+c_scale = [0, 2, 4, 5, 7, 9, 11]
+c_sc = []
+for val in c_scale:
+    c_sc.append(nl[val])
+print(c_sc)
+
+
+for i in range(4):
+    for note in c_sc:
+        n = nf[note][i]
+        print(n, i)
+        piano.play_note(n, 1, 1)
+
