@@ -1,5 +1,6 @@
 from scamp import *
-from notes import nf, nl
+from notes import *
+from functions import *
 
 s = Session(tempo=120)
 
@@ -12,9 +13,10 @@ for val in c_scale:
 print(c_sc)
 
 
-for i in range(4):
-    for note in c_sc:
-        n = nf[note][i]
-        print(n, i)
-        piano.play_note(n, 1, 1)
+# for i in range(4):
+#     for note in c_sc:
+#         n = nf[note][i]
+#         print(n, i)
+#         piano.play_note(n, 1, 1)
 
+print(get_rand_scale())
