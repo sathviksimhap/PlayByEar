@@ -3,7 +3,7 @@ from data import *
 from functions import *
 
 scale = get_scale()
-question = gen_question(scale, 5)
+question = gen_question(scale, 3)
 
 while True:
     n = input()

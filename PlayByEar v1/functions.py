@@ -54,8 +54,10 @@ def play_question(question):
     s = Session()
     piano = s.new_part("piano")
 
-    for note in notes:
-        piano.play_note(note, 1, 1)
+    for i in range(3):
+        piano.play_note(60, 0, 1)
+        for note in notes:
+            piano.play_note(note, 1, 1)
 
 
 
